@@ -6,14 +6,26 @@ def why_here():
     you_are = input('Hello! Are you a guest or employee? ')
     refined_you = you_are.lower()
     if refined_you == 'guest':
-        guest_log.append(refined_you)
+        log_guest()
     else:
-        employee_log.append(refined_you)
+        log_employee()
+    return
 
-def who_you():
-    pass
+def log_guest():
+    guest_name = input('Welcome to the waiting room. What is your name? ')
+    guest_log.append('guest ' + guest_name)
+    print()
+    print()
+    print('Thank you {}! Please have a seat.'.format(guest_name))
 
-def log_name():
-    name = input('Please enter your name: ')
-    if name != 'exit'
-        guest_log.append(name)
+
+
+def log_employee():
+    employee_name = input('Welcome to hell. What is your name? ')
+    employee_log.append("Emp ID#: " + str(id(employee_name)) + '  ' + employee_name)
+    print()
+    print()
+    print('{}! Get the fuck to work.'.format(employee_name))
+
+
+why_here()
