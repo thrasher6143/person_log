@@ -7,8 +7,17 @@ def why_here():
     refined_you = you_are.lower()
     if refined_you == 'guest':
         log_guest()
-    else:
+        why_here()
+    elif refined_you == 'employee':
         log_employee()
+        why_here()
+    elif refined_you == 'exit':
+        print(guest_log)
+        print()
+        print(employee_log)
+    else:
+        print("That is not an acceptable answer.")
+        why_here()
     return
 
 def log_guest():
